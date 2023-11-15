@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,17 @@
         * {
             box-sizing: border-box;
         }
+
         * {
             -webkit-tap-highlight-color: transparent;
             -moz-tap-highlight-color: transparent;
             -ms-tap-highlight-color: transparent;
         }
-        
-        body, button, a {
-        touch-action: none;
+
+        body,
+        button,
+        a {
+            touch-action: none;
         }
 
         body {
@@ -92,7 +96,7 @@
             padding: 10px;
         }
 
-        .nav-content{
+        .nav-content {
             padding: 20px;
         }
 
@@ -104,7 +108,7 @@
             width: 100%;
             flex-shrink: 0;
         }
-        
+
         .card {
             width: calc(25% - 20px);
             background-color: #fff;
@@ -117,7 +121,7 @@
             height: 150px;
             position: relative;
         }
-        
+
         .card-header {
             background-color: #fff;
             color: black;
@@ -156,8 +160,8 @@
             text-align: center;
         }
 
-        .text-primary{
-            margin-left:150px ;
+        .text-primary {
+            margin-left: 150px;
         }
 
         .show-dropdown {
@@ -170,6 +174,7 @@
                 opacity: 0;
                 transform: translateY(-10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -190,43 +195,43 @@
 
         @media screen and (max-width: 768px) {
 
-           .nav-content {
-        display: none;
-    }
+            .nav-content {
+                display: none;
+            }
 
-    .mobile-menu1 {
-        display: block;
-    }
+            .mobile-menu1 {
+                display: block;
+            }
 
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        cursor: pointer;
-    }
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                cursor: pointer;
+            }
 
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .menu-items a {
-        margin: 10px;
-    }
+            .menu-items a {
+                margin: 10px;
+            }
 
-    .menu-items.show {
-        display: flex;
-    }
-          
+            .menu-items.show {
+                display: flex;
+            }
+
             .product-container {
                 display: flex;
                 justify-content: center;
             }
-        
+
             .header {
-                padding: 5px; 
+                padding: 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -234,34 +239,34 @@
                 gap: 10px;
                 max-width: 100%;
             }
-        
+
             .header a {
                 padding: 6px;
-                font-size: 14px; 
+                font-size: 14px;
             }
-        
+
             .header a.logo {
-                font-size: 18px; 
+                font-size: 18px;
             }
-        
+
             .header-right {
                 display: flex;
                 justify-content: center;
-                margin-right: 5px; 
+                margin-right: 5px;
                 text-align: center;
             }
-        
+
             .nav-content {
-                padding: 5px; 
+                padding: 5px;
             }
-        
+
             nav {
                 display: flex;
-                flex-direction: column; 
+                flex-direction: column;
                 align-items: center;
-                padding: 5px;  
+                padding: 5px;
             }
-        
+
             .nav-img img {
                 margin-bottom: 5px;
                 max-height: 25px;
@@ -269,350 +274,327 @@
             }
 
             .card {
-                width: 80%; 
+                width: 80%;
             }
 
             .dropdown {
-                min-width: 100%; 
+                min-width: 100%;
             }
 
-            .mobile-menu{
-              display: flex;
-              flex-direction: column;
+            .mobile-menu {
+                display: flex;
+                flex-direction: column;
             }
         }
 
         @media screen and (max-width: 500px) {
-          
+
             .header a {
                 float: none;
                 display: block;
                 text-align: left;
             }
+
             .header-right {
                 float: none;
                 display: flex;
                 justify-content: center;
-                margin-right: 5px; 
+                margin-right: 5px;
                 text-align: center;
             }
 
-           
+
         }
     </style>
 </head>
-<body>
-  <div class="header">
-    <i class="fa fa-envelope"  style="font-size:20px; color: #f4f4f4;"><span style="margin-left: 15px;">example@gmail.com</span></i>
-    <i class="fa fa-phone" style="font-size:20px;color: white;margin-left: 0px;"><span style="margin-left: 15px;">Tel:+91 123456</span></i>
 
-    <a href="#default" class="logo"></a>
-  
-    <div class="header-right">
-     
-      
-      <i class="fa fa-facebook-f" style="font-size:20px;color: #f4f4f4;"></i>
-      <i class="fa fa-instagram" style="font-size:20px;color: #f4f4f4;"></i>
-      <i class="fa fa-youtube-play" style="font-size:20px;color: #f4f4f4;"></i>
+<body>
+    <div class="header">
+        <i class="fa fa-envelope" style="font-size:20px; color: #f4f4f4;"><span
+                style="margin-left: 15px;">example@gmail.com</span></i>
+        <i class="fa fa-phone" style="font-size:20px;color: white;margin-left: 0px;"><span
+                style="margin-left: 15px;">Tel:+91 123456</span></i>
+
+        <a href="#default" class="logo"></a>
+
+        <div class="header-right">
+
+
+            <i class="fa fa-facebook-f" style="font-size:20px;color: #f4f4f4;"></i>
+            <i class="fa fa-instagram" style="font-size:20px;color: #f4f4f4;"></i>
+            <i class="fa fa-youtube-play" style="font-size:20px;color: #f4f4f4;"></i>
+        </div>
     </div>
-  </div>
-    <!-- <nav>
+    <nav>
         <div class="nav-img">
-            <img src="https://www.onnets.in/sarkari-results/wp-content/uploads/2022/06/logo.png" alt=""> 
+            <img src="" alt="logo">
+        </div>
+        <div class="nav-items">
+            <div class="mobile-menu1">
+                <div class="mobile-menu">
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="menu-items" id="menuItems" style="display: none;">
+                        <a href="#">Home</a>
+                        <a href="#">Products</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let menuOpen = false;
+
+                document.getElementById("menuToggle").addEventListener("click", function () {
+                    var menuItems = document.getElementById("menuItems");
+                    menuOpen = !menuOpen; // Toggle the menu state
+                    menuItems.style.display = menuOpen ? "flex" : "none";
+                });
+
+
+            </script>
+
         </div>
         <div class="nav-content">
-            <a href="#" >Home</a>
-            <a href="#">Products</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="mobile-menu">
-          <div class="menu-toggle">
-              <i class="fa fa-bars" ></i>
-          </div>
-          <div class="menu-items">
-              <a href="#" style="text-align: center;">Home</a>
-              <a href="#">Products</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact</a>
-          </div>
-      </div>
-    </nav> -->
-    <nav>
-      <!-- <div class="nav-content">
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
-      </div> -->
-      <div class="nav-img">
-        <img src="" alt="<h1>logo</h1>"> 
-    </div>
-    <div class="nav-items">
-      <div class="mobile-menu1">
-          <div class="mobile-menu">
-              <div class="menu-toggle" id="menuToggle">
-                  <i class="fa fa-bars"></i>
-              </div>
-              <div class="menu-items" id="menuItems" style="display: none;">
-                  <a href="#">Home</a>
-                  <a href="#">Products</a>
-                  <a href="#">About Us</a>
-                  <a href="#">Contact</a>
-              </div>
-          </div>
-      </div>
-  <script>
-    let menuOpen = false;
-
-document.getElementById("menuToggle").addEventListener("click", function () {
-    var menuItems = document.getElementById("menuItems");
-    menuOpen = !menuOpen; // Toggle the menu state
-    menuItems.style.display = menuOpen ? "flex" : "none";
-});
-
-
-  </script>
-  
-  </div>
-          <div class="nav-content">
             <a href="#">Home</a>
             <a href="#">Products</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
         </div>
-         
-      </div>
-  </nav>
-  
-  
+
+        </div>
+    </nav>
+
+
 
     <div class="product-container">
-      <div class="card">
-        <div class="card-header" id="card-header">
-          Card Title
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
         </div>
-        <div class="dropdown" id="dropdown">
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
+
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card-header" id="card-header">
-          Card Title
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
         </div>
-        <div class="dropdown" id="dropdown">
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
-          <p>Dropdown Content</p>
+
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
         </div>
-      </div>
-   
-    <div class="card">
-      <div class="card-header" id="card-header">
-        Card Title
-      </div>
-      <div class="dropdown" id="dropdown">
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card-header" id="card-header">
-        Card Title
-      </div>
-      <div class="dropdown" id="dropdown">
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-        <p>Dropdown Content</p>
-      </div>
-    </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
-  
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
-  <div class="card">
-    <div class="card-header" id="card-header">
-      Card Title
-    </div>
-    <div class="dropdown" id="dropdown">
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-      <p>Dropdown Content</p>
-    </div>
-  </div>
- 
+        <div class="card">
+            <div class="card-header" id="card-header">
+                Card Title
+            </div>
+            <div class="dropdown" id="dropdown">
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+                <p>Dropdown Content</p>
+            </div>
+        </div>
 
- </div>
+
+    </div>
 
     <footer>
         About Us
     </footer>
-    
-    
-    
-    
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript">$(document ).ready(function () {
-    
-      $(".card-header").on("click", function () {
+    <script type="text/javascript">$(document).ready(function () {
 
-        $(".dropdown").not($(this).next()).slideUp("slow");
-        $(this).next().slideToggle("slow");
-      });
+            $(".card-header").on("click", function () {
 
-    });
-    $(document).ready(function () {
-    $(".menu-toggle").click(function () {
-        $(".menu-items").slideToggle("slow");
-    });
-});
+                $(".dropdown").not($(this).next()).slideUp("slow");
+                $(this).next().slideToggle("slow");
+            });
+
+        });
+        $(document).ready(function () {
+            $(".menu-toggle").click(function () {
+                $(".menu-items").slideToggle("slow");
+            });
+        });
     </script>
-   
+
 
 </body>
+
 </html>
