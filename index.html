@@ -1,385 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Cards</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        cursor: pointer;
-        min-width: 100vw;
-
-    }
-
-    .header {
-  overflow: hidden;
-  
-  padding: 20px 10px;
-  background-color: rgb(242, 15, 15);
-  width: 100%;
-}
-
-
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-  
- 
-}
-
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-
-
-.header-right {
-  float: right;
-  margin-right: 50px;
-  display: flex;
-  gap: 30px;
-}
-
-
-
-
-    .contact-info,
-    .social-media {
-        display: flex;
-        align-items: center;
-    
-    }
-
-    .contact-info .icon,
-    .social-media .icon {
-        font-size: 20px;
-    }
-
-    nav {
-        background: #f4f4f4;
-        text-align: center;
-        padding: 20px ;
-        display: flex;
-       justify-content: space-between;
-       
-    }
-
-    .nav-img img {
-        margin-bottom: 20px;
-        max-height: 40px;
-        margin-left: 0px;
-    }
-
-    nav a {
-        margin-right: 30px;
-        text-decoration: none;
-        text-align: center;
-        color: #333;
-        padding: 10px;
-      
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -moz-tap-highlight-color: transparent;
+            -ms-tap-highlight-color: transparent;
+        }
         
-    }
-    .nav-content{
-      padding: 20px;
-    }
+        body, button, a {
+        touch-action: none;
+        }
 
-   
-  
-    footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-        flex-shrink: 0;
-    }
-    
-    .card {
-    width: calc(25% - 20px);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    height: 150px;
-    position: relative;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            cursor: pointer;
+            min-width: 100vw;
+        }
 
-  }
-  
- 
-  .card-header {
-    background-color: #fff;
-    color: black;
-    padding: 50px;
-    font-weight: bold;
-    text-align: center;
-  }
-    .product-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        margin: auto;
-      
-        overflow-y: scroll;
-        width: 80%;
-       
+        .header {
+            overflow: hidden;
+            padding: 20px 10px;
+            background-color: rgb(242, 15, 15);
+            width: 100%;
+        }
 
-    }
-    .product-container::-webkit-scrollbar {
-  display: none;
-}
+        .header a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
 
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    min-width: 280px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-   
-  }
-  .text-primary{
-    margin-left:150px ;
-  }
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
 
+        .header-right {
+            float: right;
+            margin-right: 50px;
+            display: flex;
+            gap: 30px;
+        }
 
-  .show-dropdown {
-    display: block;
-    animation: fade-in 0.5s ease-in-out;
-  }
+        .contact-info,
+        .social-media {
+            display: flex;
+            align-items: center;
+        }
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
+        .contact-info .icon,
+        .social-media .icon {
+            font-size: 20px;
+        }
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
-}
-@media  (max-width: 509px) {
-  .header-right {
-        display: flex;
-        justify-content: center;
-        margin-right: 5px; 
-        text-align: center;
-    }
-}
+        nav {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-@media screen and (max-width: 768px) {
-  .product-container{
-    display: flex;
-    justify-content: center;
-  }
- 
-  .header {
-    padding: 5px; 
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-   max-width: 100%;
-  }
+        .nav-img img {
+            margin-bottom: 20px;
+            max-height: 40px;
+            margin-left: 0px;
+        }
 
-  .header a {
-    padding: 6px;
-    font-size: 14px; 
-  }
+        nav a {
+            margin-right: 30px;
+            text-decoration: none;
+            text-align: center;
+            color: #333;
+            padding: 10px;
+        }
 
-  .header a.logo {
-    font-size: 18px; 
-  }
+        .nav-content{
+            padding: 20px;
+        }
 
-  /* .header-right {
-    margin-right: 5px; 
-    text-align: center;
-  } */
-
-  .header-right {
-        display: flex;
-        justify-content: center;
-        margin-right: 5px; 
-        text-align: center;
-    }
-
-  .nav-content {
-    display: block; 
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    padding: 5px; 
-
- 
-  
-}
-.nav-img img {
-    margin-bottom: 5px;
-    max-height: 25px;
-    margin-left: 5px;
-  }
-}
-
-
-.card:hover {
-  box-shadow: 0px 10px 10px rgb(248, 148, 148);
-
-}
-
-.nav-content a:hover {
-    color: green;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-}
-
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.mobile-menu {
-    display: none;
-}
-
-.menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.menu-items {
-    display: block;
-}
-@media screen and (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: sticky;
-       
-    }
-
-    .nav-items {
-        display: flex;
-        flex-direction: column;
-       
-        justify-content: space-between;
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            flex-shrink: 0;
+        }
         
-    }
-    .nav-content{
-      display: none;
-    }
+        .card {
+            width: calc(25% - 20px);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            height: 150px;
+            position: relative;
+        }
+        
+        .card-header {
+            background-color: #fff;
+            color: black;
+            padding: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+            overflow-y: scroll;
+            width: 80%;
+        }
 
-    .nav-img {
-    position: absolute;
-    margin-top: 10px;
-    padding-left: 25px;
-    right: 20px;
-}
+        .product-container::-webkit-scrollbar {
+            display: none;
+        }
 
-.mobile-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    margin-left: 30px;
-    left: 0px;
-    position: sticky;
-}
-.mobile-menu1 {
-    margin-right: 400px;
-    
-}
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-width: 280px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-    
+        .text-primary{
+            margin-left:150px ;
+        }
 
-.menu-items {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 80px;
-}
-}
+        .show-dropdown {
+            display: block;
+            animation: fade-in 0.5s ease-in-out;
+        }
 
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .mobile-menu {
+            display: none;
+        }
 
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            cursor: pointer;
+        }
 
+        @media screen and (max-width: 768px) {
 
-
-/* @media screen and (max-width: 768px) {
-    .nav-content {
+           .nav-content {
         display: none;
     }
 
-    .mobile-menu {
+    .mobile-menu1 {
         display: block;
-        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
     }
 
     .menu-items {
-        display: flex;
+        display: none;
         flex-direction: column;
-       
         align-items: center;
     }
-} */
 
+    .menu-items a {
+        margin: 10px;
+    }
 
+    .menu-items.show {
+        display: flex;
+    }
+          
+            .product-container {
+                display: flex;
+                justify-content: center;
+            }
+        
+            .header {
+                padding: 5px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                max-width: 100%;
+            }
+        
+            .header a {
+                padding: 6px;
+                font-size: 14px; 
+            }
+        
+            .header a.logo {
+                font-size: 18px; 
+            }
+        
+            .header-right {
+                display: flex;
+                justify-content: center;
+                margin-right: 5px; 
+                text-align: center;
+            }
+        
+            .nav-content {
+                padding: 5px; 
+            }
+        
+            nav {
+                display: flex;
+                flex-direction: column; 
+                align-items: center;
+                padding: 5px;  
+            }
+        
+            .nav-img img {
+                margin-bottom: 5px;
+                max-height: 25px;
+                margin-left: 5px;
+            }
 
-  </style>
+            .card {
+                width: 80%; 
+            }
+
+            .dropdown {
+                min-width: 100%; 
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+          
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .header-right {
+                float: none;
+                display: flex;
+                justify-content: center;
+                margin-right: 5px; 
+                text-align: center;
+            }
+
+            .mobile-menu{
+              display: flex;
+              flex-direction: column;
+            }
+        }
+    </style>
+</head>
 <body>
   <div class="header">
     <i class="fa fa-envelope"  style="font-size:20px; color: #f4f4f4;"><span style="margin-left: 15px;">example@gmail.com</span></i>
@@ -427,20 +346,33 @@
       <div class="nav-img">
         <img src="https://www.onnets.in/sarkari-results/wp-content/uploads/2022/06/logo.png" alt=""> 
     </div>
-      <div class="nav-items">
-          <div class="mobile-menu1">
-            <div class="mobile-menu">
-              <div class="menu-toggle">
+    <div class="nav-items">
+      <div class="mobile-menu1">
+          <div class="mobile-menu">
+              <div class="menu-toggle" id="menuToggle">
                   <i class="fa fa-bars"></i>
               </div>
-              <div class="menu-items">
+              <div class="menu-items" id="menuItems" style="display: none;">
                   <a href="#">Home</a>
                   <a href="#">Products</a>
                   <a href="#">About Us</a>
                   <a href="#">Contact</a>
               </div>
           </div>
-          </div>
+      </div>
+  <script>
+    let menuOpen = false;
+
+document.getElementById("menuToggle").addEventListener("click", function () {
+    var menuItems = document.getElementById("menuItems");
+    menuOpen = !menuOpen; // Toggle the menu state
+    menuItems.style.display = menuOpen ? "flex" : "none";
+});
+
+
+  </script>
+  
+  </div>
           <div class="nav-content">
             <a href="#">Home</a>
             <a href="#">Products</a>
@@ -658,6 +590,10 @@
     <footer>
         About Us
     </footer>
+    
+    
+    
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript">$(document ).ready(function () {
     
@@ -678,5 +614,3 @@
 
 </body>
 </html>
-
-
